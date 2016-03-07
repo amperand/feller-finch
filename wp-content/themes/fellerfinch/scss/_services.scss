@@ -1,0 +1,30 @@
+#services {
+	background:#4f4f4f url(../img/blueprint-busy.png) no-repeat;;
+	
+	.row {background:transparent url(../img/big-icon.png) no-repeat top center;}
+	
+	h1,h2,h3,h4,h5,h6,p, a.featured-btn {color:$white;}
+	#services-icons {font:1em $museo300;text-transform: uppercase;
+		article {
+			width:49%;display:inline-block;vertical-align: top;margin-bottom:20px;
+			a {display:block;text-align:center;}
+			img {margin:0 auto;float:none;}
+			
+// 			&:nth-child(even) {margin-left:5%;width:50%;}
+			
+			p {padding-top: 0.5em;line-height: 1.2em;}
+		}
+	}
+	a.featured-btn {border-color:#fff;
+		&:hover {background:rgba(255,255,255,0.2);}
+	}
+}
+
+.reveal-modal {text-align:center;min-height:0 !important;z-index:9999; }
+
+@media only screen and (min-width: 64.063em) {
+	#services-icons {
+		a {text-align:left !important;}
+		img {margin:0 1em 0 0 !important;float:left !important;}
+	}
+}

@@ -1,0 +1,65 @@
+#contact {
+	background:#4f4f4f;
+  -webkit-box-shadow: inset 0px 8px 7px 0px #2b2b2b;
+          box-shadow: inset 0px 8px 7px 0px #2b2b2b;
+    color:#fff;
+    text-align: center;
+    
+    h2, p {color:#fff;}
+
+	input, textarea {background:transparent;border:1px solid #fff;color:#fff;}
+	input[type="submit"] {padding:0.7em 1.5em;-webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;}
+	input[type="submit"]:hover {background:rgba(255,255,255,0.2);}
+	span.your-name, span.your-email {width:100%;}
+	span.wpcf7-not-valid-tip {
+	  position: absolute;
+	  top: -2.5em;
+	  z-index: 1000;
+	  background: #fff;
+	  padding: 0.2em;
+	  font-size:0.8em;
+	  border-radius: 2px;
+	  background-clip: padding-box;
+	}
+	span.wpcf7-not-valid-tip:after {
+		content:"";
+	    width:0;
+	    height:0;
+	    border-right: 10px solid transparent;
+		  border-top: 10px solid white;
+		  border-left: 10px solid transparent;
+		  position: absolute;
+		  bottom: -6px;
+		  right: 6px;
+	}
+	
+}
+input::-webkit-input-placeholder {
+	color: #ccc;
+}
+input::-moz-placeholder {
+	color:#ccc;
+}
+input:-moz-placeholder {   /* Older versions of Firefox */
+	color:#ccc;
+}
+input:-ms-input-placeholder { 
+	color:#ccc;
+}
+
+textarea::-webkit-input-placeholder {
+	color: #ccc;
+}
+textarea::-moz-placeholder {
+	color:#ccc;
+}
+textarea:-moz-placeholder {   /* Older versions of Firefox */
+	color:#ccc;
+}
+textarea:-ms-input-placeholder { 
+	color:#ccc;
+}
+input.wpcf7-quiz {max-width:29px;}

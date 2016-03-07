@@ -1,0 +1,17 @@
+.ie8 body, .ie8 .row {width:1050px;position:relative;margin:0 auto;}
+.ie8 body, .ie8 #page {min-width:1050px;width:100%;position:relative;margin:0 auto;}
+.ie8 .medium-8 {width:698px;}
+.ie8 .medium-7 {width:611px;}
+.ie8 .medium-5 {width:435px;}
+.ie8 .medium-3 {width:294px;margin-right:25px;}
+.ie8 .with-bump {}
+.ie8 .medium-3.with-bump {width:202px;margin-right:15px;padding-left:0;padding-right:0;}
+
+.ie8 .medium-offset-2 {margin-left:174px !important;}
+
+.ie8 .show-for-small-up {display:none;visibility:hidden;}
+.ie8 #masthead nav {width:500px;display:inline-block;}
+.ie8 #masthead #social-area {margin-left:0px !important;}
+.ie8 #masthead #social-area, .ie8 #masthead .floater {float:right !important;}
+.ie8 #offscreen-container {width:250px;}
+.ie8 .site-footer {background:#373737;min-height:120px;}

@@ -1,0 +1,218 @@
+#page {overflow:hidden;}
+.nav-menu {
+	text-transform: $uppercase;
+
+	li {
+		display:inline;list-style:none;
+		margin-right:0.7em;
+		margin-left:0.7em;
+	}
+	li:first-child{margin-left:0;}
+	li:last-child {margin-right:0;}
+	a {
+		font:13px $museo500;
+		color:$menugray;
+		line-height:5.4em;
+		letter-spacing:0.4px;
+		
+		&:hover {color:$white;}
+	}
+	
+}
+.site-navigation {max-height:73px;}
+.site-navigation.expanded {max-height:none !important;}
+
+#masthead {
+	position:fixed;top:0;width:100%;z-index:9000;
+// 	.nav-menu {margin-top:25px;}
+	#magellan-stuff {top:25px;position:relative;}
+	#primary-navigation {display:inline-block;}
+	ul {margin:0;padding:0;}	
+	.hide-for-small.dark-bg {
+		background:#373737;
+		
+		.site-title {position:absolute;
+			top:0;left:50%;margin-left:-81px;z-index:500;
+		}
+	}
+	#toggle-menu {
+	  display: inline-block;
+	  margin-top:2em;
+	  margin-right: 1em;
+	  position: relative;
+	  float: right;
+	  cursor: pointer;
+	  
+	  img {width:100%;}
+	}
+	.show-for-small-up {
+		background:#373737;width:100%;height:81px;
+			
+		.site-title, #social-area, #toggle-menu {display:inline-block;vertical-align:top;}
+		.site-title {max-width:30%;}
+		#social-area {max-width:63%;position:relative;z-index:3333;}
+		#social-area.hide-for-small {display:none;}
+		#toggle-menu {max-width:5%;}
+		#primary-navigation {display:none;
+			background: #373737;
+			  padding-top: 4em;
+			  margin-top: -5.1em;
+			    padding-left: 0.7855em;
+				  padding-right: 0.7855em;
+				  width: 104.1%;
+				  margin-left: -0.7855em;
+		}
+		.nav-menu li {
+			display:block;
+			margin-right:0;
+			
+			a{
+				display:block;
+				line-height:3em;
+				border-top:1px solid #ccc;
+			}
+		}
+	}
+	.floater {padding:0;float:right;}
+	.show-for-small-up .site-navigation li {margin-left:0;margin-right:0;}
+}
+.logged-in #masthead {top:32px;}
+#social-area {display:inline-block;position:relative;z-index:3333;
+	a, div {display:inline-block;padding:0px 12px;}
+	#phone-holder {padding:0 12px 0 0;
+		width:106px;position:relative;top:-35px;
+		a {position:absolute;padding:0;left:0;
+			&#phone {top:5px;}
+			&#phonetn {top:32px;}
+		}
+	}
+	a:first-child {padding-left:0;}
+}
+.vertical-line {border-left:1px solid #4d4d4d;padding:19px 0px 50px !important;vertical-align:middle;}
+
+.flexslider.slideshow {
+	.slides li article {
+		position: absolute;
+		opacity: 0;
+		right: 110%;
+		top:7em;
+	}
+	li.flex-active-slide article {right:0;opacity:1;}
+	h2, p {margin:0;text-align:center;}
+	h2 {background:rgba(193,152,79,0.83);
+		padding:30px 23px;color:$white;text-transform:uppercase;font-size:2.41em;font-family:$museo700;}
+	p {background:rgba(255,255,255,0.83);}
+	.row {position:relative;}
+	.slides > li {position:relative;}
+	
+	/* Slide in from the right*/
+	.slides > li.fromRight .text {
+		-webkit-animation: fromRightAnim1 0.6s ease-in 0.8s both;
+		-moz-animation: fromRightAnim1 0.6s ease-in 0.8s both;
+		-o-animation: fromRightAnim1 0.6s ease-in 0.8s both;
+		-ms-animation: fromRightAnim1 0.6s ease-in 0.8s both;
+		animation: fromRightAnim1 0.6s ease-in 0.8s both;
+	}
+		@-webkit-keyframes fromRightAnim1{
+			0%{ right: 110%; opacity: 0; }
+			100%{ right: 10%; opacity: 1; }
+		}
+		@-moz-keyframes fromRightAnim1{
+			0%{ right: 110%; opacity: 0; }
+			100%{right: 10%; opacity: 1; }
+		}
+		@-o-keyframes fromRightAnim1{
+			0%{right: 110%; opacity: 0; }
+			100%{right: 10%; opacity: 1; }
+		}
+		@-ms-keyframes fromRightAnim1{
+			0%{right: 110%; opacity: 0; }
+			100%{right: 10%; opacity: 1; }
+		}
+		@keyframes fromRightAnim1{
+			0%{right: 110%; opacity: 0; }
+			100%{right: 10%; opacity: 1; }
+		}
+	/* Slide out to the left*/
+	.slideshow .slides > li.toLeft .text {
+		opacity:0;
+		right:0%;
+		-webkit-animation: toLeftAnim1 0.6s ease-in both;
+		-moz-animation: toLeftAnim1 0.6s ease-in both;
+		-o-animation: toLeftAnim1 0.6s ease-in both;
+		-ms-animation: toLeftAnim1 0.6s ease-in both;
+		animation: toLeftAnim1 0.6s ease-in both;
+	}
+		@-webkit-keyframes toLeftAnim1{
+			0%{right: 10%;  opacity: 1; }
+			80%{right: -30%; opacity: 0; animation-timing-function:easeInOutQuart; }
+		}
+		@-moz-keyframes toLeftAnim1{
+			0%{ right: 10%;  opacity: 1; }
+			80%{right: -30%; opacity: 0; animation-timing-function:easeInOutQuart; }
+		}
+		@-o-keyframes fromLeftAnim1{
+			0%{right: 10%;  opacity: 1; }
+			80%{right: -30%; opacity: 0; animation-timing-function:easeInOutQuart; }
+		}
+		@-ms-keyframes toLeftAnim1{
+			0%{right: 10%;  opacity: 1; }
+			80%{right: -30%; opacity: 0; animation-timing-function:easeInOutQuart; }
+		}
+		@keyframes toLeftAnim1{
+			0%{right: 10%;  opacity: 1; }
+			80%{right: -30%; opacity: 0; animation-timing-function:easeInOutQuart; }
+		}
+
+}
+#history {
+	position:relative;
+	background:#fff url(../img/blueprint-lighter.png) no-repeat;
+	
+	&.section {padding:0;}
+	.medium-7 {padding:4em 0 4em 0.7855em;}
+	#offscreen-container {
+	  position: absolute;
+	  right:0;
+	  top: 0;
+	  width:34.4%;
+	}
+}
+[data-magellan-expedition], [data-magellan-expedition-clone] {background:transparent;min-width:0;padding:0;}
+[data-magellan-expedition-clone] {display: none !important; visibility:hidden !important;}
+.sub-nav dt a, .sub-nav dd a, .sub-nav li a {padding:0;}
+.sub-nav dt.active a, .sub-nav dd.active a, .sub-nav li.active a {background:transparent;padding:0;border-radius:0;color:$gold;}
+.fixed {left:auto;}
+li.active a:hover {background:transparent !important;}
+li.active a, .sub-nav li.active a{color:$gold !important; }
+
+#colophon {background:#373737;
+	border-top:1px solid $gold;
+	padding:1.5em 0;
+	text-align:center;
+	
+	.floater a {padding:0 8px;}
+}
+
+@media only screen and (max-width:641px) {
+	#offscreen-container {display:none;}	
+}
+@media only screen and (min-width:641px) {
+	#social-area {display:inline-block !important;}
+	#logo-foot {float:left;}
+}
+@media only screen and (min-width:950px) {
+	#colophon .sub-nav {float:left;margin-top:0.8em;}
+	#colophon .floater {margin-top:0.7em;float:right;}
+}
+@media only screen and (min-width:1026px) and (max-width:1090px) {
+	.nav-menu li {margin-right:0.6em;margin-left:0.6em;}
+}
+@media only screen and (min-width:1111px) {
+	#social-area a, #social-area div {padding:0px 15px;}
+	#masthead .nav-menu li {margin:0 1.4em 0 0;}
+}
+@media only screen and (min-width:1153px) {
+	#social-area a, #social-area div {padding:0px 18px;}
+// 	#social-area  a#phone {padding:0px 19px 0 0;}
+}
